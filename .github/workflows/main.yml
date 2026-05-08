@@ -1,4 +1,4 @@
-name: My Workflow
+name: My Node Workflow
 
 on: 
     push: 
@@ -13,11 +13,19 @@ jobs:
             - name: Checkout Repository
               uses: actions/checkout@v4
 
+            - name: Set up Node.js
+              uses: actions/setup-node@v3
+              with:
+                node-version: '20'
+
+            - name: Install dependencies
+              run: npm install
+
             - name: Show files
               run: ls
             
-            - name: Run node file
-              run: node kndex.js
+            - name: Run node app
+              run: node index.js
 
             - name: Print Current Directory
               run: pwd

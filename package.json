@@ -1,0 +1,23 @@
+{
+  "name": "yaml-use",
+  "version": "1.0.0",
+  "description": "testing yaml workflow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kush-kodr2/workflowtest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kush-kodr2/workflowtest/issues"
+  },
+  "homepage": "https://github.com/Kush-kodr2/workflowtest#readme",
+  "dependencies": {
+    "cowsay": "^1.6.0"
+  }
+}
