@@ -18,3 +18,9 @@ jobs:
             
             - name: Run node file
               run: node index.js
+
+            - name: Print Current Directory
+              run: pwd
+
+            - name: Say Hello
+              run: echo "Someone's is learning devOps, Let's GO!!"
