@@ -12,23 +12,26 @@ jobs:
         steps:
             - name: Checkout Repository
               uses: actions/checkout@v4
-
+#this step checks out the repository so that the workflow can access the code and files in the repository.
             - name: Set up Node.js
               uses: actions/setup-node@v3
               with:
                 node-version: '18'
-
+#this step sets up the Node.js environment for the workflow. It specifies that we want to use Node.js version 18. This allows us to run Node.js applications and use npm (Node Package Manager) to manage dependencies in our workflow.
             - name: Install dependencies
               run: npm install
+#this step runs the command npm install, which installs the dependencies specified in the package.json file of the Node.js project. This is necessary to ensure that all required packages are available for the application to run correctly.
 
             - name: Show files
               run: ls
-            
+#this step runs the command ls, which lists the files and directories in the current working directory. This can be useful for debugging purposes to verify that the necessary files are present after checking out the repository and installing dependencies.
             - name: Run node app
               run: node index.js
-
+#this step runs the command node index.js, which executes the Node.js application defined in the index.js file. This is typically the main entry point of a Node.js application, and running this command will start the application.
             - name: Print Current Directory
               run: pwd
-
+#this step runs the command pwd, which stands for "print working directory". It outputs the current directory path where the workflow is being executed. This can be helpful for debugging purposes to confirm that the workflow is running in the expected directory.
             - name: Say Hello
               run: echo "Someone's is learning devOps, Let's GO!!"
+#this step runs the command echo "Someone's is learning devOps, Let's GO!!", which simply prints the message "Someone's is learning devOps, Let's GO!!" to the console. This is a fun way to indicate that the workflow has reached this point and can serve as a motivational message for someone learning DevOps.
+...
